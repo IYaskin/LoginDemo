@@ -13,6 +13,10 @@
 		9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBAD26F8B08B00D391DE /* EnterViewController.swift */; };
 		9335EBB026F8B08B00D391DE /* EnterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBAE26F8B08B00D391DE /* EnterViewController.xib */; };
 		9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBB226F8B2EA00D391DE /* UIViewController+loadFromNib.swift */; };
+		9335EBB926F8D01F00D391DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBB726F8D01F00D391DE /* LoginViewController.swift */; };
+		9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBB826F8D01F00D391DE /* LoginViewController.xib */; };
+		9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */; };
+		9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9335EBAD26F8B08B00D391DE /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		9335EBAE26F8B08B00D391DE /* EnterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterViewController.xib; sourceTree = "<group>"; };
 		9335EBB226F8B2EA00D391DE /* UIViewController+loadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+loadFromNib.swift"; sourceTree = "<group>"; };
+		9335EBB726F8D01F00D391DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9335EBB826F8D01F00D391DE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,7 @@
 			children = (
 				9335EB9626F8948200D391DE /* AppDelegate.swift */,
 				9335EBAA26F8AEEB00D391DE /* Extensions */,
-				9335EBB126F8B09D00D391DE /* Enter */,
+				9335EBB426F8CE7D00D391DE /* ViewControllers */,
 				9335EB9F26F8948200D391DE /* Assets.xcassets */,
 				9335EBA126F8948200D391DE /* LaunchScreen.storyboard */,
 				9335EBA426F8948200D391DE /* Info.plist */,
@@ -81,6 +89,34 @@
 				9335EBAE26F8B08B00D391DE /* EnterViewController.xib */,
 			);
 			path = Enter;
+			sourceTree = "<group>";
+		};
+		9335EBB426F8CE7D00D391DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9335EBB126F8B09D00D391DE /* Enter */,
+				9335EBB526F8CE8900D391DE /* Login */,
+				9335EBB626F8CE8F00D391DE /* Registration */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9335EBB526F8CE8900D391DE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9335EBB726F8D01F00D391DE /* LoginViewController.swift */,
+				9335EBB826F8D01F00D391DE /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9335EBB626F8CE8F00D391DE /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */,
+				9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +176,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */,
+				9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */,
 				9335EBA326F8948200D391DE /* LaunchScreen.storyboard in Resources */,
 				9335EBA026F8948200D391DE /* Assets.xcassets in Resources */,
 				9335EBB026F8B08B00D391DE /* EnterViewController.xib in Resources */,
@@ -153,9 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9335EBB926F8D01F00D391DE /* LoginViewController.swift in Sources */,
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
 				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,
 				9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */,
+				9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
