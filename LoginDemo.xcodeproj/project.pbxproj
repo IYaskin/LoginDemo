@@ -17,6 +17,8 @@
 		9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBB826F8D01F00D391DE /* LoginViewController.xib */; };
 		9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */; };
 		9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */; };
+		9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBC026F9333B00D391DE /* ColorsViewController.swift */; };
+		9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBC126F9333B00D391DE /* ColorsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9335EBB826F8D01F00D391DE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		9335EBC026F9333B00D391DE /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		9335EBC126F9333B00D391DE /* ColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				9335EBB126F8B09D00D391DE /* Enter */,
 				9335EBB526F8CE8900D391DE /* Login */,
 				9335EBB626F8CE8F00D391DE /* Registration */,
+				9335EBBF26F932EF00D391DE /* Colors */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +122,15 @@
 				9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		9335EBBF26F932EF00D391DE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				9335EBC026F9333B00D391DE /* ColorsViewController.swift */,
+				9335EBC126F9333B00D391DE /* ColorsViewController.xib */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,7 @@
 				9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */,
 				9335EBA326F8948200D391DE /* LaunchScreen.storyboard in Resources */,
 				9335EBA026F8948200D391DE /* Assets.xcassets in Resources */,
+				9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */,
 				9335EBB026F8B08B00D391DE /* EnterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +210,7 @@
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
 				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,
 				9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */,
+				9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */,
 				9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

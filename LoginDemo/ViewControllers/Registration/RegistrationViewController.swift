@@ -37,6 +37,11 @@ class RegistrationViewController: UIViewController {
         self.view.endEditing(true)
     }
 
+    @IBAction func registrationButtonTapped(_ sender: UIButton) {
+        let vc = ColorsViewController.loadFromNib()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vc
+    }
 }
 
 extension RegistrationViewController: UITextFieldDelegate {

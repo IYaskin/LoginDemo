@@ -30,6 +30,9 @@
                     <state key="normal" title="Зарегистрироваться">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="registrationButtonTapped:" destination="-1" eventType="touchUpInside" id="Eb4-15-2vn"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qYU-g6-UxZ">
                     <rect key="frame" x="20" y="332" width="374" height="142"/>
