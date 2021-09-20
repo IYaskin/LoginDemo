@@ -17,7 +17,16 @@ class EnterViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     private func setupUI() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
+        
         loginButton.layer.cornerRadius = loginButton.bounds.height / 2
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = UIColor.black.cgColor
