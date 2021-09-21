@@ -12,6 +12,8 @@ class EnterViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
     
+    private lazy var router = EnterRouter(viewController: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -38,13 +40,11 @@ class EnterViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        let vc = LoginViewController.loadFromNib()
-        navigationController?.pushViewController(vc, animated: true)
+        router.pushLoginVC()
     }
     
     
     @IBAction func registrationButtonTapped(_ sender: UIButton) {
-        let vc = RegistrationViewController.loadFromNib()
-        navigationController?.pushViewController(vc, animated: true)
+        router.pushRegistrationVC()
     }
 }

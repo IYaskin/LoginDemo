@@ -13,6 +13,9 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    private lazy var viewModel = RegistrationViewModel()
+    private lazy var router = RegistrationRouter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -38,16 +41,20 @@ class RegistrationViewController: UIViewController {
     }
 
     @IBAction func registrationButtonTapped(_ sender: UIButton) {
-//        let vc = ColorsViewController.loadFromNib()
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = vc
-        NetworkManager.shared.postRequest(path: .register,
-                                          params: ["email": "igor@mail.ru",
-                                                   "password": "123456"]) { json in
-            print("JSON")
-            print(json)
-        } failure: { error in
-            print(error)
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else {
+            showOkAlert(title: "Неправильный email или пароль")
+            return
+        }
+        
+        viewModel.register(email: email,
+                           password: password) { [self] json in
+            // saveToken from json
+            DispatchQueue.main.async {
+                router.openColorsVC()
+            }
+        } failure: { [self] error in
+            showOkAlert(title: error.localizedDescription)
         }
 
     }

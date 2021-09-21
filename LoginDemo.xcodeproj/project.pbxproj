@@ -19,9 +19,16 @@
 		9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */; };
 		9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBC026F9333B00D391DE /* ColorsViewController.swift */; };
 		9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBC126F9333B00D391DE /* ColorsViewController.xib */; };
-		9352FA2226F9CACE0055DF8F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2126F9CACE0055DF8F /* NetworkManager.swift */; };
+		9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2126F9CACE0055DF8F /* NetworkService.swift */; };
 		9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2426FA0AC40055DF8F /* ApiPaths.swift */; };
 		9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2626FA10080055DF8F /* NetworkError.swift */; };
+		9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2926FA59520055DF8F /* NetworkManager.swift */; };
+		9352FA2C26FA5C380055DF8F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */; };
+		9352FA2E26FA5C440055DF8F /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */; };
+		9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2F26FA5D910055DF8F /* EnterRouter.swift */; };
+		9352FA3226FA69040055DF8F /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA3126FA69040055DF8F /* LoginRouter.swift */; };
+		9352FA3426FA69110055DF8F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA3326FA69110055DF8F /* LoginViewModel.swift */; };
+		9352FA3626FA6D480055DF8F /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA3526FA6D480055DF8F /* UIViewController+showAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +46,16 @@
 		9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		9335EBC026F9333B00D391DE /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		9335EBC126F9333B00D391DE /* ColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
-		9352FA2126F9CACE0055DF8F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9352FA2126F9CACE0055DF8F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9352FA2426FA0AC40055DF8F /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
 		9352FA2626FA10080055DF8F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9352FA2926FA59520055DF8F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		9352FA2F26FA5D910055DF8F /* EnterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRouter.swift; sourceTree = "<group>"; };
+		9352FA3126FA69040055DF8F /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		9352FA3326FA69110055DF8F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9352FA3526FA6D480055DF8F /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9335EBB226F8B2EA00D391DE /* UIViewController+loadFromNib.swift */,
+				9352FA3526FA6D480055DF8F /* UIViewController+showAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -96,6 +111,7 @@
 		9335EBB126F8B09D00D391DE /* Enter */ = {
 			isa = PBXGroup;
 			children = (
+				9352FA2F26FA5D910055DF8F /* EnterRouter.swift */,
 				9335EBAD26F8B08B00D391DE /* EnterViewController.swift */,
 				9335EBAE26F8B08B00D391DE /* EnterViewController.xib */,
 			);
@@ -116,6 +132,8 @@
 		9335EBB526F8CE8900D391DE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9352FA3126FA69040055DF8F /* LoginRouter.swift */,
+				9352FA3326FA69110055DF8F /* LoginViewModel.swift */,
 				9335EBB726F8D01F00D391DE /* LoginViewController.swift */,
 				9335EBB826F8D01F00D391DE /* LoginViewController.xib */,
 			);
@@ -125,6 +143,8 @@
 		9335EBB626F8CE8F00D391DE /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */,
+				9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */,
 				9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */,
 				9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */,
 			);
@@ -144,7 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				9352FA2826FA32E50055DF8F /* Model */,
-				9352FA2126F9CACE0055DF8F /* NetworkManager.swift */,
+				9352FA2126F9CACE0055DF8F /* NetworkService.swift */,
+				9352FA2926FA59520055DF8F /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -232,14 +253,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9335EBB926F8D01F00D391DE /* LoginViewController.swift in Sources */,
+				9352FA2C26FA5C380055DF8F /* RegistrationViewModel.swift in Sources */,
+				9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */,
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
+				9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */,
 				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,
 				9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */,
-				9352FA2226F9CACE0055DF8F /* NetworkManager.swift in Sources */,
+				9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */,
+				9352FA3626FA6D480055DF8F /* UIViewController+showAlert.swift in Sources */,
+				9352FA3426FA69110055DF8F /* LoginViewModel.swift in Sources */,
 				9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */,
 				9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */,
 				9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */,
 				9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */,
+				9352FA3226FA69040055DF8F /* LoginRouter.swift in Sources */,
+				9352FA2E26FA5C440055DF8F /* RegistrationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

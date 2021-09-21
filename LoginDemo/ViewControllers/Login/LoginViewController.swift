@@ -13,6 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    private lazy var viewModel = LoginViewModel()
+    private lazy var router = LoginRouter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -38,17 +41,20 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-//        let vc = ColorsViewController.loadFromNib()
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = vc
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else {
+            showOkAlert(title: "Неправильный email или пароль")
+            return
+        }
         
-        NetworkManager.shared.postRequest(path: .login,
-                                          params: ["username": "igor@mail.ru",
-                                                   "password": "123456"]) { json in
-            print("JSON")
-            print(json)
-        } failure: { error in
-            print(error)
+        viewModel.login(email: email,
+                        password: password) { [self] json in
+            // saveToken from json
+            DispatchQueue.main.async {
+                router.openColorsVC()
+            }
+        } failure: { [self] error in
+            showOkAlert(title: error.localizedDescription)
         }
 
     }
