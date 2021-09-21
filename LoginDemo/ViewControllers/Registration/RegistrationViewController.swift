@@ -38,9 +38,18 @@ class RegistrationViewController: UIViewController {
     }
 
     @IBAction func registrationButtonTapped(_ sender: UIButton) {
-        let vc = ColorsViewController.loadFromNib()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = vc
+//        let vc = ColorsViewController.loadFromNib()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = vc
+        NetworkManager.shared.postRequest(path: .register,
+                                          params: ["email": "igor@mail.ru",
+                                                   "password": "123456"]) { json in
+            print("JSON")
+            print(json)
+        } failure: { error in
+            print(error)
+        }
+
     }
 }
 
