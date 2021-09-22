@@ -48,8 +48,7 @@ class RegistrationViewController: UIViewController {
         }
         
         viewModel.register(email: email,
-                           password: password) { [self] json in
-            // saveToken from json
+                           password: password) { [self] in
             DispatchQueue.main.async {
                 router.openColorsVC()
             }

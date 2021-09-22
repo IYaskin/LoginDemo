@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias SuccessHandler = (_ json : Any) -> ()
+typealias SuccessHandler = (_ data : Data?) -> ()
 typealias ErrorHandler = (_ error : Error) -> ()
 
 
@@ -44,14 +44,15 @@ class NetworkService {
                 failure(NetworkError.badResponse)
                 return
             }
-            
-            do {
-                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-                success(responseJSON)
-            }
-            catch {
-                failure(NetworkError.parseError)
-            }
+            success(data)
+
+//            do {
+//                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
+//                success(responseJSON)
+//            }
+//            catch {
+//                failure(NetworkError.parseError)
+//            }
         })
         task.resume()
     }
@@ -87,14 +88,14 @@ class NetworkService {
                 failure(NetworkError.badResponse)
                 return
             }
-
-            do {
-                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-                success(responseJSON)
-            }
-            catch {
-                failure(NetworkError.parseError)
-            }
+            success(data)
+//            do {
+//                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
+//                success(responseJSON)
+//            }
+//            catch {
+//                failure(NetworkError.parseError)
+//            }
         })
         
         task.resume()

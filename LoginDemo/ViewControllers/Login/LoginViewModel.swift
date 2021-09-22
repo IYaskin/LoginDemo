@@ -12,11 +12,14 @@ class LoginViewModel {
     
     func login(email: String,
                password: String,
-               success: @escaping SuccessHandler,
+               success: @escaping () -> Void,
                failure: @escaping ErrorHandler) {
         networkManager.login(email: email,
                              password: password,
-                             success: success,
+                             success: { data in
+                                AccountSettings.shared.save(data: data)
+                                success()
+                             },
                              failure: failure)
     }
     

@@ -12,11 +12,14 @@ class RegistrationViewModel {
     
     func register(email: String,
                   password: String,
-                  success: @escaping SuccessHandler,
+                  success: @escaping () -> Void,
                   failure: @escaping ErrorHandler) {
         networkManager.register(email: email,
                                 password: password,
-                                success: success,
+                                success: { data in
+                                   AccountSettings.shared.save(data: data)
+                                   success()
+                                },
                                 failure: failure)
     }
     

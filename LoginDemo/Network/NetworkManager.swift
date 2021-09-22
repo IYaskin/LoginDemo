@@ -27,8 +27,8 @@ class NetworkManager {
                   password: String,
                   success: @escaping SuccessHandler,
                   failure: @escaping ErrorHandler) {
-        networkService.postRequest(path: .login,
-                                   params: ["username": email,
+        networkService.postRequest(path: .register,
+                                   params: ["email": email,
                                             "password": password],
                                    success: success,
                                    failure: failure)
