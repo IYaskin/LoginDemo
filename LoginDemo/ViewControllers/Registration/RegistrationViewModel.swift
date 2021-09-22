@@ -10,16 +10,28 @@ import Foundation
 class RegistrationViewModel {
     private let networkManager = NetworkManager()
     
+    func login(email: String,
+               password: String,
+               success: @escaping () -> Void,
+               failure: @escaping ErrorHandler) {
+        print("Email = \(email)\nPassword = \(password)")
+        networkManager.login(email: email,
+                             password: password,
+                             success: { data in
+                                AccountSettings.shared.save(data: data)
+                                success()
+                             },
+                             failure: failure)
+    }
+
     func register(email: String,
                   password: String,
-                  success: @escaping () -> Void,
+                  success: @escaping SuccessHandler,
                   failure: @escaping ErrorHandler) {
+        print("Email = \(email)\nPassword = \(password)")
         networkManager.register(email: email,
                                 password: password,
-                                success: { data in
-                                   AccountSettings.shared.save(data: data)
-                                   success()
-                                },
+                                success: success,
                                 failure: failure)
     }
     

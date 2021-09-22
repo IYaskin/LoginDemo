@@ -12,7 +12,7 @@ class LoginRouter {
     func openColorsVC() {
         let vc = ColorsViewController.loadFromNib()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = vc
+        appDelegate.window?.rootViewController = UINavigationController(rootViewController: vc)
     }
     
 }

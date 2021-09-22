@@ -16,9 +16,9 @@ extension NetworkError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .badResponse:
-            return "badResponse"
+            return "Ошибка от сервера :("
         case .parseError:
-            return "parseError"
+            return "Ошибка парсинга :("
         }
     }
 }

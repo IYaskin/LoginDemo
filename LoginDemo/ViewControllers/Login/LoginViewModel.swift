@@ -14,6 +14,7 @@ class LoginViewModel {
                password: String,
                success: @escaping () -> Void,
                failure: @escaping ErrorHandler) {
+        print("Email = \(email)\nPassword = \(password)")
         networkManager.login(email: email,
                              password: password,
                              success: { data in

@@ -12,6 +12,7 @@ extension UIViewController {
     func showOkAlert(title: String,
                        message: String? = nil,
                        okAction: ((UIAlertAction) -> Void)? = nil) {
+        DispatchQueue.main.async { [self] in
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
@@ -20,7 +21,6 @@ extension UIViewController {
                                      style: .default,
                                      handler: okAction)
         alert.addAction(okAction)
-        DispatchQueue.main.async { [self] in
             present(alert,
                     animated: true,
                     completion: nil)

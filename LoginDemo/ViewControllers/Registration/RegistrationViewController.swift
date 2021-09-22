@@ -41,14 +41,28 @@ class RegistrationViewController: UIViewController {
     }
 
     @IBAction func registrationButtonTapped(_ sender: UIButton) {
+        register()
+    }
+    
+    private func register() {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else {
             showOkAlert(title: "Неправильный email или пароль")
             return
         }
-        
+
         viewModel.register(email: email,
-                           password: password) { [self] in
+                           password: password) { [self] _ in
+            login(email: email, password: password)
+        } failure: { [self] error in
+            showOkAlert(title: error.localizedDescription)
+        }
+    }
+    
+    private func login(email: String,
+                       password: String) {
+        viewModel.login(email: email,
+                        password: password) { [self] in
             DispatchQueue.main.async {
                 router.openColorsVC()
             }
