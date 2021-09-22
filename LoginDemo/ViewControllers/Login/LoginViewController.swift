@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private lazy var viewModel = LoginViewModel()
     private lazy var router = LoginRouter()
@@ -39,6 +40,20 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    private func showLoader() {
+        DispatchQueue.main.async { [self] in
+            loginButton.isHidden = true
+            activityIndicator.startAnimating()
+        }
+    }
+    
+    private func hideLoader() {
+        DispatchQueue.main.async { [self] in
+            loginButton.isHidden = false
+            activityIndicator.stopAnimating()
+        }
+    }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text,
@@ -46,16 +61,14 @@ class LoginViewController: UIViewController {
             showOkAlert(title: "Неправильный email или пароль")
             return
         }
-        
+        showLoader()
         viewModel.login(email: email,
                         password: password) { [self] in
-            DispatchQueue.main.async {
-                router.openColorsVC()
-            }
+            router.openColorsVC()
         } failure: { [self] error in
+            hideLoader()
             showOkAlert(title: error.localizedDescription)
         }
-
     }
 }
 

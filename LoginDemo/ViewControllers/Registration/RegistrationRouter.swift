@@ -10,9 +10,11 @@ import UIKit
 class RegistrationRouter {
     
     func openColorsVC() {
-        let vc = ColorsViewController.loadFromNib()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+        DispatchQueue.main.async {
+            let vc = ColorsViewController.loadFromNib()
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+        }
     }
     
 }

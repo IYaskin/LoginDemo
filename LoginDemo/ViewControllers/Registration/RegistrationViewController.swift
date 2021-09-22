@@ -12,6 +12,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private lazy var viewModel = RegistrationViewModel()
     private lazy var router = RegistrationRouter()
@@ -44,17 +45,32 @@ class RegistrationViewController: UIViewController {
         register()
     }
     
+    private func showLoader() {
+        DispatchQueue.main.async { [self] in
+            registrationButton.isHidden = true
+            activityIndicator.startAnimating()
+        }
+    }
+    
+    private func hideLoader() {
+        DispatchQueue.main.async { [self] in
+            registrationButton.isHidden = false
+            activityIndicator.stopAnimating()
+        }
+    }
+    
     private func register() {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else {
             showOkAlert(title: "Неправильный email или пароль")
             return
         }
-
+        showLoader()
         viewModel.register(email: email,
                            password: password) { [self] _ in
             login(email: email, password: password)
         } failure: { [self] error in
+            hideLoader()
             showOkAlert(title: error.localizedDescription)
         }
     }
@@ -63,10 +79,9 @@ class RegistrationViewController: UIViewController {
                        password: String) {
         viewModel.login(email: email,
                         password: password) { [self] in
-            DispatchQueue.main.async {
-                router.openColorsVC()
-            }
+            router.openColorsVC()
         } failure: { [self] error in
+            hideLoader()
             showOkAlert(title: error.localizedDescription)
         }
 

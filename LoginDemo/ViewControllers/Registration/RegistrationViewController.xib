@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="LoginDemo" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="dOQ-di-iuF" id="uyT-iQ-cV8"/>
                 <outlet property="emailTextField" destination="VyW-9e-KKc" id="lts-wL-A7N"/>
                 <outlet property="passwordTextField" destination="SAh-0r-VEY" id="CYJ-Ls-Yc2"/>
                 <outlet property="registrationButton" destination="VHn-as-QYk" id="qaO-6I-8mq"/>
@@ -123,6 +124,9 @@
                         <constraint firstItem="Lfl-py-leY" firstAttribute="width" secondItem="qYU-g6-UxZ" secondAttribute="width" id="SOP-Xb-MMP"/>
                     </constraints>
                 </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-di-iuF">
+                    <rect key="frame" x="197" y="807" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,11 +134,13 @@
                 <constraint firstItem="qYU-g6-UxZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-50" id="2lJ-Un-e3n"/>
                 <constraint firstItem="qYU-g6-UxZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EuW-71-DEz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VHn-as-QYk" secondAttribute="bottom" constant="20" id="IYk-GO-PIh"/>
+                <constraint firstItem="dOQ-di-iuF" firstAttribute="centerY" secondItem="VHn-as-QYk" secondAttribute="centerY" id="KYA-uT-yNn"/>
                 <constraint firstItem="VHn-as-QYk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Omr-NH-uDi"/>
                 <constraint firstItem="qYU-g6-UxZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="UAB-5I-wSt"/>
+                <constraint firstItem="dOQ-di-iuF" firstAttribute="centerX" secondItem="VHn-as-QYk" secondAttribute="centerX" id="cUn-yg-Q9d"/>
                 <constraint firstItem="VHn-as-QYk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kgh-eI-qb0"/>
             </constraints>
-            <point key="canvasLocation" x="125" y="114"/>
+            <point key="canvasLocation" x="124.6376811594203" y="113.83928571428571"/>
         </view>
     </objects>
 </document>

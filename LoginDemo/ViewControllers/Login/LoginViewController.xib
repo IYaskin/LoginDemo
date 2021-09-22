@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LoginDemo" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="QUp-CX-5wb" id="Xqb-XZ-MIs"/>
                 <outlet property="emailTextField" destination="9Om-FJ-9wf" id="FA3-Rn-pYj"/>
                 <outlet property="loginButton" destination="FbS-Kc-A6c" id="czH-wx-dU8"/>
                 <outlet property="passwordTextField" destination="6NJ-Vv-nmf" id="QtF-CX-1CD"/>
@@ -123,14 +124,19 @@
                         <constraint firstItem="foc-zT-d7F" firstAttribute="width" secondItem="RIw-Tw-FAf" secondAttribute="width" id="aOG-L7-x04"/>
                     </constraints>
                 </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-CX-5wb">
+                    <rect key="frame" x="197" y="807" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="QUp-CX-5wb" firstAttribute="centerX" secondItem="FbS-Kc-A6c" secondAttribute="centerX" id="12j-Nc-Fv3"/>
                 <constraint firstItem="RIw-Tw-FAf" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-50" id="4vX-H9-kko"/>
                 <constraint firstItem="RIw-Tw-FAf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="54I-YZ-jGE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FbS-Kc-A6c" secondAttribute="bottom" constant="20" id="Afe-31-xYF"/>
                 <constraint firstItem="RIw-Tw-FAf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Bcw-GF-5cH"/>
+                <constraint firstItem="QUp-CX-5wb" firstAttribute="centerY" secondItem="FbS-Kc-A6c" secondAttribute="centerY" id="KbD-nn-6Th"/>
                 <constraint firstItem="FbS-Kc-A6c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Pej-68-zMc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FbS-Kc-A6c" secondAttribute="trailing" constant="20" id="nSN-es-3Zx"/>
             </constraints>
