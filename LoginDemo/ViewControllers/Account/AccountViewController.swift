@@ -21,12 +21,15 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var logoutButton: UIButton!
     
+    private lazy var router = AccountRouter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
     private func setupUI() {
+        self.title = "Аккаунт"
         logoutButton.layer.cornerRadius = logoutButton.bounds.height / 2
         logoutButton.layer.borderWidth = 1
         logoutButton.layer.borderColor = UIColor.red.cgColor
@@ -47,6 +50,18 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func logoutButton(_ sender: UIButton) {
-        
+        showAlert(title: "Выйти из аккаунта?",
+                  okButtonTitle: "Ок",
+                  okAction: { [self] _ in
+                    logout()
+                  },
+                  cancelButtonTitle: "Отмена")
+    }
+    
+    private func logout() {
+        DispatchQueue.main.async { [self] in
+            AccountSettings.shared.deleteAccount()
+            router.openEnterVC()
+        }
     }
 }
