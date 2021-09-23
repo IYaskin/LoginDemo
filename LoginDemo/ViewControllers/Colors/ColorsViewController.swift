@@ -8,9 +8,12 @@
 import UIKit
 
 class ColorsViewController: UIViewController {
+    
+    private lazy var router = ColorsRouter(viewController: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         if let tokenData = AccountSettings.shared.tokenData {
             print("token: \(tokenData.token ?? "nil\n\n")")
             print("tokenTtl: \(tokenData.tokenTtl ?? "nil\n\n")")
@@ -22,11 +25,22 @@ class ColorsViewController: UIViewController {
         } else {
             print("No token Data")
         }
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+    private func setupUI() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
+        
+        let accountButton = UIBarButtonItem(title: "Аккаунт",
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(accountButtonTapped))
+        self.navigationItem.rightBarButtonItem = accountButton
     }
-
+    
+    @objc func accountButtonTapped() {
+        router.pushAccountVC()
+    }
 }

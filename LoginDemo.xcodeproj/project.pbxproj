@@ -21,6 +21,9 @@
 		9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBC126F9333B00D391DE /* ColorsViewController.xib */; };
 		934A74A226FB3AB900B992DE /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934A74A126FB3AB900B992DE /* AccountSettings.swift */; };
 		934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473026FC8ED000CE6575 /* ValidationError.swift */; };
+		934C473326FCAE9600CE6575 /* ColorsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473226FCAE9600CE6575 /* ColorsRouter.swift */; };
+		934C473626FCAED400CE6575 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473426FCAED400CE6575 /* AccountViewController.swift */; };
+		934C473726FCAED400CE6575 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934C473526FCAED400CE6575 /* AccountViewController.xib */; };
 		9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2126F9CACE0055DF8F /* NetworkService.swift */; };
 		9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2426FA0AC40055DF8F /* ApiPaths.swift */; };
 		9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2626FA10080055DF8F /* NetworkError.swift */; };
@@ -50,6 +53,9 @@
 		9335EBC126F9333B00D391DE /* ColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
 		934A74A126FB3AB900B992DE /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
 		934C473026FC8ED000CE6575 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		934C473226FCAE9600CE6575 /* ColorsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsRouter.swift; sourceTree = "<group>"; };
+		934C473426FCAED400CE6575 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		934C473526FCAED400CE6575 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		9352FA2126F9CACE0055DF8F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9352FA2426FA0AC40055DF8F /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
 		9352FA2626FA10080055DF8F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 				9335EBB526F8CE8900D391DE /* Login */,
 				9335EBB626F8CE8F00D391DE /* Registration */,
 				9335EBBF26F932EF00D391DE /* Colors */,
+				934C473826FCAED800CE6575 /* Account */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 		9335EBBF26F932EF00D391DE /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				934C473226FCAE9600CE6575 /* ColorsRouter.swift */,
 				9335EBC026F9333B00D391DE /* ColorsViewController.swift */,
 				9335EBC126F9333B00D391DE /* ColorsViewController.xib */,
 			);
@@ -172,6 +180,15 @@
 				934C473026FC8ED000CE6575 /* ValidationError.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		934C473826FCAED800CE6575 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				934C473426FCAED400CE6575 /* AccountViewController.swift */,
+				934C473526FCAED400CE6575 /* AccountViewController.xib */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		9352FA2326FA0A3C0055DF8F /* Network */ = {
@@ -251,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */,
+				934C473726FCAED400CE6575 /* AccountViewController.xib in Resources */,
 				9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */,
 				9335EBA326F8948200D391DE /* LaunchScreen.storyboard in Resources */,
 				9335EBA026F8948200D391DE /* Assets.xcassets in Resources */,
@@ -272,10 +290,12 @@
 				9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */,
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
 				934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */,
+				934C473626FCAED400CE6575 /* AccountViewController.swift in Sources */,
 				9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */,
 				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,
 				9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */,
 				9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */,
+				934C473326FCAE9600CE6575 /* ColorsRouter.swift in Sources */,
 				9352FA3626FA6D480055DF8F /* UIViewController+showAlert.swift in Sources */,
 				9352FA3426FA69110055DF8F /* LoginViewModel.swift in Sources */,
 				9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */,
