@@ -60,11 +60,16 @@ class RegistrationViewController: UIViewController {
     }
     
     private func register() {
-        guard let email = emailTextField.text,
-              let password = passwordTextField.text else {
-            showOkAlert(title: "Неправильный email или пароль")
+        let error = viewModel.validateEmailAndPassword(email: emailTextField.text,
+                                                       password: passwordTextField.text)
+        if let error = error {
+            showOkAlert(title: error.localizedDescription)
             return
         }
+         
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        
         showLoader()
         viewModel.register(email: email,
                            password: password) { [self] _ in

@@ -20,6 +20,7 @@
 		9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBC026F9333B00D391DE /* ColorsViewController.swift */; };
 		9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBC126F9333B00D391DE /* ColorsViewController.xib */; };
 		934A74A226FB3AB900B992DE /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934A74A126FB3AB900B992DE /* AccountSettings.swift */; };
+		934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473026FC8ED000CE6575 /* ValidationError.swift */; };
 		9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2126F9CACE0055DF8F /* NetworkService.swift */; };
 		9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2426FA0AC40055DF8F /* ApiPaths.swift */; };
 		9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2626FA10080055DF8F /* NetworkError.swift */; };
@@ -48,6 +49,7 @@
 		9335EBC026F9333B00D391DE /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		9335EBC126F9333B00D391DE /* ColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
 		934A74A126FB3AB900B992DE /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
+		934C473026FC8ED000CE6575 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		9352FA2126F9CACE0055DF8F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9352FA2426FA0AC40055DF8F /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
 		9352FA2626FA10080055DF8F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		9335EBB626F8CE8F00D391DE /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				934C472F26FC8EC300CE6575 /* Model */,
 				9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */,
 				9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */,
 				9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */,
@@ -161,6 +164,14 @@
 				9335EBC126F9333B00D391DE /* ColorsViewController.xib */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		934C472F26FC8EC300CE6575 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				934C473026FC8ED000CE6575 /* ValidationError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9352FA2326FA0A3C0055DF8F /* Network */ = {
@@ -260,6 +271,7 @@
 				9352FA2C26FA5C380055DF8F /* RegistrationViewModel.swift in Sources */,
 				9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */,
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
+				934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */,
 				9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */,
 				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,
 				9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */,
