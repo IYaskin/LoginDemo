@@ -25,6 +25,7 @@
 		934C473626FCAED400CE6575 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473426FCAED400CE6575 /* AccountViewController.swift */; };
 		934C473726FCAED400CE6575 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934C473526FCAED400CE6575 /* AccountViewController.xib */; };
 		934C473A26FCB6D900CE6575 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473926FCB6D900CE6575 /* AccountRouter.swift */; };
+		934C473C26FCD39000CE6575 /* ColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473B26FCD39000CE6575 /* ColorsViewModel.swift */; };
 		9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2126F9CACE0055DF8F /* NetworkService.swift */; };
 		9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2426FA0AC40055DF8F /* ApiPaths.swift */; };
 		9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2626FA10080055DF8F /* NetworkError.swift */; };
@@ -58,6 +59,7 @@
 		934C473426FCAED400CE6575 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		934C473526FCAED400CE6575 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		934C473926FCB6D900CE6575 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		934C473B26FCD39000CE6575 /* ColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewModel.swift; sourceTree = "<group>"; };
 		9352FA2126F9CACE0055DF8F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9352FA2426FA0AC40055DF8F /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
 		9352FA2626FA10080055DF8F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				934C473226FCAE9600CE6575 /* ColorsRouter.swift */,
+				934C473B26FCD39000CE6575 /* ColorsViewModel.swift */,
 				9335EBC026F9333B00D391DE /* ColorsViewController.swift */,
 				9335EBC126F9333B00D391DE /* ColorsViewController.xib */,
 			);
@@ -293,6 +296,7 @@
 				9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */,
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
 				934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */,
+				934C473C26FCD39000CE6575 /* ColorsViewModel.swift in Sources */,
 				934C473626FCAED400CE6575 /* AccountViewController.swift in Sources */,
 				9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */,
 				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,

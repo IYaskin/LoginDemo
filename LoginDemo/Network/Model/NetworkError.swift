@@ -10,6 +10,8 @@ import Foundation
 enum NetworkError: Error {
     case badResponse
     case parseError
+    case noBearerToken
+    case cantReadTokenExpiredAt
 }
 
 extension NetworkError: LocalizedError {
@@ -19,6 +21,10 @@ extension NetworkError: LocalizedError {
             return "Ошибка от сервера :("
         case .parseError:
             return "Ошибка парсинга :("
+        case .noBearerToken:
+            return "Ошибка токена :("
+        case .cantReadTokenExpiredAt:
+            return "Ошибка даты токена :("
         }
     }
 }

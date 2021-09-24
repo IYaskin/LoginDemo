@@ -9,23 +9,12 @@ import UIKit
 
 class ColorsViewController: UIViewController {
     
+    private lazy var viewModel = ColorsViewModel()
     private lazy var router = ColorsRouter(viewController: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        if let tokenData = AccountSettings.shared.tokenData {
-            print("token: \(tokenData.token ?? "nil\n\n")")
-            print("tokenTtl: \(tokenData.tokenTtl ?? "nil\n\n")")
-            print("tokenExpiredAt: \(tokenData.tokenExpiredAt ?? "nil\n\n")")
-            print("refreshToken: \(tokenData.refreshToken ?? "nil\n\n")")
-            print("refreshTokenTtl: \(tokenData.refreshTokenTtl ?? "nil\n\n")")
-            print("refreshTokenExpiredAt: \(tokenData.refreshTokenExpiredAt ?? "nil\n\n")")
-            print("email: \(tokenData.user?.email ?? "nil\n\n")")
-        } else {
-            print("No token Data")
-        }
-        
     }
     
     private func setupUI() {
@@ -33,6 +22,12 @@ class ColorsViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = .white
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
         
+        let updateColorsButton = UIBarButtonItem(title: "Обновить",
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(updateColorsButtonTapped))
+        self.navigationItem.leftBarButtonItem = updateColorsButton
+
         let accountButton = UIBarButtonItem(title: "Аккаунт",
                                             style: .plain,
                                             target: self,
@@ -42,5 +37,19 @@ class ColorsViewController: UIViewController {
     
     @objc func accountButtonTapped() {
         router.pushAccountVC()
+    }
+    
+    @objc func updateColorsButtonTapped() {
+        getColors()
+    }
+
+    
+    private func getColors() {
+        viewModel.getColors {
+            print("SUCCESS")
+        } failure: { error in
+            print(error.localizedDescription)
+        }
+
     }
 }

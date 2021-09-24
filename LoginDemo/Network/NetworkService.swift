@@ -30,29 +30,32 @@ class NetworkService {
                     failure: @escaping ErrorHandler) {
         
         let url = baseURL.appendingPathComponent(path.rawValue)
-        let urlRequest = URLRequest(url: url)
+        print("URL = \(url)")
+        var urlRequest = URLRequest(url: url)
+        
+        if path == .colors {
+            guard let token = AccountSettings.shared.tokenData?.token else {
+                return failure(NetworkError.noBearerToken)
+            }
+            urlRequest.setValue( "Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
 
         let task = defaultSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) -> () in
+            print("Response: \(response)")
             guard error == nil else {
                 failure(error!)
                 return
             }
-            
+
             guard let data = data,
                   let urlResponse = response as? HTTPURLResponse,
                   (200..<300).contains(urlResponse.statusCode) else {
                 failure(NetworkError.badResponse)
                 return
             }
+
             success(data)
 
-//            do {
-//                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-//                success(responseJSON)
-//            }
-//            catch {
-//                failure(NetworkError.parseError)
-//            }
         })
         task.resume()
     }
@@ -75,8 +78,7 @@ class NetworkService {
         }
         
         let task = defaultSession.dataTask(with: urlRequest, completionHandler: {(data, response, error) -> () in
-            print("Response")
-            print(response)
+            print("Response: \(response)")
             guard error == nil else {
                 failure(error!)
                 return
@@ -89,13 +91,6 @@ class NetworkService {
                 return
             }
             success(data)
-//            do {
-//                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-//                success(responseJSON)
-//            }
-//            catch {
-//                failure(NetworkError.parseError)
-//            }
         })
         
         task.resume()
