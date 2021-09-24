@@ -8,22 +8,70 @@
 
 /* Begin PBXBuildFile section */
 		9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EB9626F8948200D391DE /* AppDelegate.swift */; };
-		9335EB9926F8948200D391DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EB9826F8948200D391DE /* SceneDelegate.swift */; };
-		9335EB9B26F8948200D391DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EB9A26F8948200D391DE /* ViewController.swift */; };
-		9335EB9E26F8948200D391DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9335EB9C26F8948200D391DE /* Main.storyboard */; };
 		9335EBA026F8948200D391DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9335EB9F26F8948200D391DE /* Assets.xcassets */; };
 		9335EBA326F8948200D391DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBA126F8948200D391DE /* LaunchScreen.storyboard */; };
+		9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBAD26F8B08B00D391DE /* EnterViewController.swift */; };
+		9335EBB026F8B08B00D391DE /* EnterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBAE26F8B08B00D391DE /* EnterViewController.xib */; };
+		9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBB226F8B2EA00D391DE /* UIViewController+loadFromNib.swift */; };
+		9335EBB926F8D01F00D391DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBB726F8D01F00D391DE /* LoginViewController.swift */; };
+		9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBB826F8D01F00D391DE /* LoginViewController.xib */; };
+		9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */; };
+		9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */; };
+		9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9335EBC026F9333B00D391DE /* ColorsViewController.swift */; };
+		9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9335EBC126F9333B00D391DE /* ColorsViewController.xib */; };
+		934829D426FDB31100EE22CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934829D326FDB31100EE22CD /* Colors.swift */; };
+		934A74A226FB3AB900B992DE /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934A74A126FB3AB900B992DE /* AccountSettings.swift */; };
+		934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473026FC8ED000CE6575 /* ValidationError.swift */; };
+		934C473326FCAE9600CE6575 /* ColorsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473226FCAE9600CE6575 /* ColorsRouter.swift */; };
+		934C473626FCAED400CE6575 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473426FCAED400CE6575 /* AccountViewController.swift */; };
+		934C473726FCAED400CE6575 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934C473526FCAED400CE6575 /* AccountViewController.xib */; };
+		934C473A26FCB6D900CE6575 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473926FCB6D900CE6575 /* AccountRouter.swift */; };
+		934C473C26FCD39000CE6575 /* ColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C473B26FCD39000CE6575 /* ColorsViewModel.swift */; };
+		9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2126F9CACE0055DF8F /* NetworkService.swift */; };
+		9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2426FA0AC40055DF8F /* ApiPaths.swift */; };
+		9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2626FA10080055DF8F /* NetworkError.swift */; };
+		9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2926FA59520055DF8F /* NetworkManager.swift */; };
+		9352FA2C26FA5C380055DF8F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */; };
+		9352FA2E26FA5C440055DF8F /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */; };
+		9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA2F26FA5D910055DF8F /* EnterRouter.swift */; };
+		9352FA3226FA69040055DF8F /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA3126FA69040055DF8F /* LoginRouter.swift */; };
+		9352FA3426FA69110055DF8F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA3326FA69110055DF8F /* LoginViewModel.swift */; };
+		9352FA3626FA6D480055DF8F /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FA3526FA6D480055DF8F /* UIViewController+showAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9335EB9326F8948200D391DE /* LoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9335EB9626F8948200D391DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9335EB9826F8948200D391DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9335EB9A26F8948200D391DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9335EB9D26F8948200D391DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9335EB9F26F8948200D391DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9335EBA226F8948200D391DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9335EBA426F8948200D391DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9335EBAD26F8B08B00D391DE /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		9335EBAE26F8B08B00D391DE /* EnterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterViewController.xib; sourceTree = "<group>"; };
+		9335EBB226F8B2EA00D391DE /* UIViewController+loadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+loadFromNib.swift"; sourceTree = "<group>"; };
+		9335EBB726F8D01F00D391DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9335EBB826F8D01F00D391DE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		9335EBC026F9333B00D391DE /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		9335EBC126F9333B00D391DE /* ColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
+		934829D326FDB31100EE22CD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		934A74A126FB3AB900B992DE /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
+		934C473026FC8ED000CE6575 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		934C473226FCAE9600CE6575 /* ColorsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsRouter.swift; sourceTree = "<group>"; };
+		934C473426FCAED400CE6575 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		934C473526FCAED400CE6575 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		934C473926FCB6D900CE6575 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		934C473B26FCD39000CE6575 /* ColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewModel.swift; sourceTree = "<group>"; };
+		9352FA2126F9CACE0055DF8F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9352FA2426FA0AC40055DF8F /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
+		9352FA2626FA10080055DF8F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9352FA2926FA59520055DF8F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		9352FA2F26FA5D910055DF8F /* EnterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRouter.swift; sourceTree = "<group>"; };
+		9352FA3126FA69040055DF8F /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		9352FA3326FA69110055DF8F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9352FA3526FA6D480055DF8F /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +105,126 @@
 			isa = PBXGroup;
 			children = (
 				9335EB9626F8948200D391DE /* AppDelegate.swift */,
-				9335EB9826F8948200D391DE /* SceneDelegate.swift */,
-				9335EB9A26F8948200D391DE /* ViewController.swift */,
-				9335EB9C26F8948200D391DE /* Main.storyboard */,
+				934A74A126FB3AB900B992DE /* AccountSettings.swift */,
+				9352FA2326FA0A3C0055DF8F /* Network */,
+				9335EBAA26F8AEEB00D391DE /* Extensions */,
+				9335EBB426F8CE7D00D391DE /* ViewControllers */,
 				9335EB9F26F8948200D391DE /* Assets.xcassets */,
 				9335EBA126F8948200D391DE /* LaunchScreen.storyboard */,
 				9335EBA426F8948200D391DE /* Info.plist */,
 			);
 			path = LoginDemo;
+			sourceTree = "<group>";
+		};
+		9335EBAA26F8AEEB00D391DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9335EBB226F8B2EA00D391DE /* UIViewController+loadFromNib.swift */,
+				9352FA3526FA6D480055DF8F /* UIViewController+showAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9335EBB126F8B09D00D391DE /* Enter */ = {
+			isa = PBXGroup;
+			children = (
+				9352FA2F26FA5D910055DF8F /* EnterRouter.swift */,
+				9335EBAD26F8B08B00D391DE /* EnterViewController.swift */,
+				9335EBAE26F8B08B00D391DE /* EnterViewController.xib */,
+			);
+			path = Enter;
+			sourceTree = "<group>";
+		};
+		9335EBB426F8CE7D00D391DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9335EBB126F8B09D00D391DE /* Enter */,
+				9335EBB526F8CE8900D391DE /* Login */,
+				9335EBB626F8CE8F00D391DE /* Registration */,
+				9335EBBF26F932EF00D391DE /* Colors */,
+				934C473826FCAED800CE6575 /* Account */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9335EBB526F8CE8900D391DE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9352FA3126FA69040055DF8F /* LoginRouter.swift */,
+				9352FA3326FA69110055DF8F /* LoginViewModel.swift */,
+				9335EBB726F8D01F00D391DE /* LoginViewController.swift */,
+				9335EBB826F8D01F00D391DE /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9335EBB626F8CE8F00D391DE /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				934C472F26FC8EC300CE6575 /* Model */,
+				9352FA2D26FA5C440055DF8F /* RegistrationRouter.swift */,
+				9352FA2B26FA5C380055DF8F /* RegistrationViewModel.swift */,
+				9335EBBB26F8D02B00D391DE /* RegistrationViewController.swift */,
+				9335EBBC26F8D02B00D391DE /* RegistrationViewController.xib */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		9335EBBF26F932EF00D391DE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				934829D226FDB30600EE22CD /* Model */,
+				934C473226FCAE9600CE6575 /* ColorsRouter.swift */,
+				934C473B26FCD39000CE6575 /* ColorsViewModel.swift */,
+				9335EBC026F9333B00D391DE /* ColorsViewController.swift */,
+				9335EBC126F9333B00D391DE /* ColorsViewController.xib */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		934829D226FDB30600EE22CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				934829D326FDB31100EE22CD /* Colors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		934C472F26FC8EC300CE6575 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				934C473026FC8ED000CE6575 /* ValidationError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		934C473826FCAED800CE6575 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				934C473926FCB6D900CE6575 /* AccountRouter.swift */,
+				934C473426FCAED400CE6575 /* AccountViewController.swift */,
+				934C473526FCAED400CE6575 /* AccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		9352FA2326FA0A3C0055DF8F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9352FA2826FA32E50055DF8F /* Model */,
+				9352FA2126F9CACE0055DF8F /* NetworkService.swift */,
+				9352FA2926FA59520055DF8F /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9352FA2826FA32E50055DF8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9352FA2426FA0AC40055DF8F /* ApiPaths.swift */,
+				9352FA2626FA10080055DF8F /* NetworkError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +284,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9335EBBE26F8D02B00D391DE /* RegistrationViewController.xib in Resources */,
+				934C473726FCAED400CE6575 /* AccountViewController.xib in Resources */,
+				9335EBBA26F8D01F00D391DE /* LoginViewController.xib in Resources */,
 				9335EBA326F8948200D391DE /* LaunchScreen.storyboard in Resources */,
 				9335EBA026F8948200D391DE /* Assets.xcassets in Resources */,
-				9335EB9E26F8948200D391DE /* Main.storyboard in Resources */,
+				9335EBC326F9333B00D391DE /* ColorsViewController.xib in Resources */,
+				9335EBB026F8B08B00D391DE /* EnterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +301,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9335EB9B26F8948200D391DE /* ViewController.swift in Sources */,
+				934A74A226FB3AB900B992DE /* AccountSettings.swift in Sources */,
+				9335EBB926F8D01F00D391DE /* LoginViewController.swift in Sources */,
+				9352FA2C26FA5C380055DF8F /* RegistrationViewModel.swift in Sources */,
+				9352FA3026FA5D910055DF8F /* EnterRouter.swift in Sources */,
 				9335EB9726F8948200D391DE /* AppDelegate.swift in Sources */,
-				9335EB9926F8948200D391DE /* SceneDelegate.swift in Sources */,
+				934C473126FC8ED000CE6575 /* ValidationError.swift in Sources */,
+				934C473C26FCD39000CE6575 /* ColorsViewModel.swift in Sources */,
+				934C473626FCAED400CE6575 /* AccountViewController.swift in Sources */,
+				9352FA2A26FA59520055DF8F /* NetworkManager.swift in Sources */,
+				9335EBAF26F8B08B00D391DE /* EnterViewController.swift in Sources */,
+				9352FA2526FA0AC40055DF8F /* ApiPaths.swift in Sources */,
+				9352FA2226F9CACE0055DF8F /* NetworkService.swift in Sources */,
+				934C473326FCAE9600CE6575 /* ColorsRouter.swift in Sources */,
+				934829D426FDB31100EE22CD /* Colors.swift in Sources */,
+				9352FA3626FA6D480055DF8F /* UIViewController+showAlert.swift in Sources */,
+				9352FA3426FA69110055DF8F /* LoginViewModel.swift in Sources */,
+				9335EBB326F8B2EA00D391DE /* UIViewController+loadFromNib.swift in Sources */,
+				9352FA2726FA10080055DF8F /* NetworkError.swift in Sources */,
+				9335EBC226F9333B00D391DE /* ColorsViewController.swift in Sources */,
+				9335EBBD26F8D02B00D391DE /* RegistrationViewController.swift in Sources */,
+				934C473A26FCB6D900CE6575 /* AccountRouter.swift in Sources */,
+				9352FA3226FA69040055DF8F /* LoginRouter.swift in Sources */,
+				9352FA2E26FA5C440055DF8F /* RegistrationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9335EB9C26F8948200D391DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9335EB9D26F8948200D391DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9335EBA126F8948200D391DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32FHL9M78J;
 				INFOPLIST_FILE = LoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaskin.LoginDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32FHL9M78J;
 				INFOPLIST_FILE = LoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaskin.LoginDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
