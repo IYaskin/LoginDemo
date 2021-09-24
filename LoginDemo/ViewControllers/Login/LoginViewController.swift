@@ -42,16 +42,16 @@ class LoginViewController: UIViewController {
     }
     
     private func showLoader() {
-        DispatchQueue.main.async { [self] in
-            loginButton.isHidden = true
-            activityIndicator.startAnimating()
+        DispatchQueue.main.async { [weak self] in
+            self?.loginButton.isHidden = true
+            self?.activityIndicator.startAnimating()
         }
     }
     
     private func hideLoader() {
-        DispatchQueue.main.async { [self] in
-            loginButton.isHidden = false
-            activityIndicator.stopAnimating()
+        DispatchQueue.main.async { [weak self] in
+            self?.loginButton.isHidden = false
+            self?.activityIndicator.stopAnimating()
         }
     }
 
@@ -68,11 +68,11 @@ class LoginViewController: UIViewController {
         
         showLoader()
         viewModel.login(email: email,
-                        password: password) { [self] in
-            router.openColorsVC()
-        } failure: { [self] error in
-            hideLoader()
-            showOkAlert(title: error.localizedDescription)
+                        password: password) { [weak self] in
+            self?.router.openColorsVC()
+        } failure: { [weak self] error in
+            self?.hideLoader()
+            self?.showOkAlert(title: error.localizedDescription)
         }
     }
 }

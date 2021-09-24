@@ -62,16 +62,16 @@ class AccountViewController: UIViewController {
     @IBAction func logoutButton(_ sender: UIButton) {
         showAlert(title: "Выйти из аккаунта?",
                   okButtonTitle: "Ок",
-                  okAction: { [self] _ in
-                    logout()
+                  okAction: { [weak self] _ in
+                    self?.logout()
                   },
                   cancelButtonTitle: "Отмена")
     }
     
     private func logout() {
-        DispatchQueue.main.async { [self] in
+        DispatchQueue.main.async { [weak self] in
             AccountSettings.shared.deleteAccount()
-            router.openEnterVC()
+            self?.router.openEnterVC()
         }
     }
 }

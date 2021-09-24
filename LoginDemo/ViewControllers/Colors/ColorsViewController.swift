@@ -9,8 +9,12 @@ import UIKit
 
 class ColorsViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     private lazy var viewModel = ColorsViewModel()
     private lazy var router = ColorsRouter(viewController: self)
+    
+    private var colors: [Colors] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,10 @@ class ColorsViewController: UIViewController {
                                             target: self,
                                             action: #selector(accountButtonTapped))
         self.navigationItem.rightBarButtonItem = accountButton
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        getColors()
     }
     
     @objc func accountButtonTapped() {
@@ -45,11 +53,41 @@ class ColorsViewController: UIViewController {
 
     
     private func getColors() {
-        viewModel.getColors {
-            print("SUCCESS")
+        viewModel.getColors { [weak self] colors in
+            self?.colors = colors
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         } failure: { error in
             print(error.localizedDescription)
         }
+    }
+    
+}
 
+extension ColorsViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        colors.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        colors[section].possibleColors.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.selectionStyle = .none
+        let color = colors[indexPath.section].possibleColors[indexPath.row]
+        cell.textLabel?.text = color.color + " - \(color.hexValues.count) hex"
+        return cell
+    }
+    
+    
+}
+
+
+extension ColorsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        colors[section].type
     }
 }

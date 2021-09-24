@@ -10,20 +10,19 @@ import Foundation
 class ColorsViewModel {
     private let networkManager = NetworkManager()
     
-    func getColors(success: @escaping () -> Void,
+    func getColors(success: @escaping ([Colors]) -> Void,
                    failure: @escaping ErrorHandler) {
         
         networkManager.getColors(success: { data in
-            if let data = data {
-                do {
-                    let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(responseJSON)
-                }
-                catch {
-                    print("Failure")
-                }
+            if let data = data,
+               let colors = try? JSONDecoder().decode(Array<Colors>.self, from: data) {
+                print(colors)
+                success(colors)
+            } else {
+                print("Bad parsing Colors")
+                failure(NetworkError.parseError)
             }
-            success()
+
         },
         failure: failure)
     }

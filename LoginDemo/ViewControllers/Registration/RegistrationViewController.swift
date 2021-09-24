@@ -46,16 +46,16 @@ class RegistrationViewController: UIViewController {
     }
     
     private func showLoader() {
-        DispatchQueue.main.async { [self] in
-            registrationButton.isHidden = true
-            activityIndicator.startAnimating()
+        DispatchQueue.main.async { [weak self] in
+            self?.registrationButton.isHidden = true
+            self?.activityIndicator.startAnimating()
         }
     }
     
     private func hideLoader() {
-        DispatchQueue.main.async { [self] in
-            registrationButton.isHidden = false
-            activityIndicator.stopAnimating()
+        DispatchQueue.main.async { [weak self] in
+            self?.registrationButton.isHidden = false
+            self?.activityIndicator.stopAnimating()
         }
     }
     
@@ -72,22 +72,22 @@ class RegistrationViewController: UIViewController {
         
         showLoader()
         viewModel.register(email: email,
-                           password: password) { [self] _ in
-            login(email: email, password: password)
-        } failure: { [self] error in
-            hideLoader()
-            showOkAlert(title: error.localizedDescription)
+                           password: password) { [weak self] _ in
+            self?.login(email: email, password: password)
+        } failure: { [weak self] error in
+            self?.hideLoader()
+            self?.showOkAlert(title: error.localizedDescription)
         }
     }
     
     private func login(email: String,
                        password: String) {
         viewModel.login(email: email,
-                        password: password) { [self] in
-            router.openColorsVC()
-        } failure: { [self] error in
-            hideLoader()
-            showOkAlert(title: error.localizedDescription)
+                        password: password) { [weak self] in
+            self?.router.openColorsVC()
+        } failure: { [weak self] error in
+            self?.hideLoader()
+            self?.showOkAlert(title: error.localizedDescription)
         }
 
     }

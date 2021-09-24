@@ -36,12 +36,12 @@ class NetworkManager {
     
     func getColors(success: @escaping SuccessHandler,
                    failure: @escaping ErrorHandler) {
-        updateTokenIfNeeded(completion: { [self] in
-            networkService.getRequest(path: .colors,
-                                      success: success,
-                                      failure: failure)
+        updateTokenIfNeeded(completion: { [weak self] in
+            self?.networkService.getRequest(path: .colors,
+                                            success: success,
+                                            failure: failure)
         },
-                            failure: failure)
+        failure: failure)
     }
     
     func updateTokenIfNeeded(completion: @escaping ()->Void,
